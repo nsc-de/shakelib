@@ -1,9 +1,23 @@
 package shake.lang
 
+/**
+ * A native class that represents an array of elements of type [T].
+ */
 native class Array<T> {
 
+    /**
+     * The number of elements in the array.
+     */
     native val length: int;
+
+    /**
+     * Appends the given element to the end of the array.
+     */
     native operator fun get(index: int): T;
+
+    /**
+     * Returns the element at the given index.
+     */
     native operator fun set(index: int, value: T): void;
 
 }

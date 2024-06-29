@@ -1,6 +1,45 @@
 package shake.lang
 
+/**
+ * Inverts the value of this boolean.
+ * 
+ * Table of results:
+ * true -> false
+ * false -> true
+ */
 public native operator fun boolean.not(): boolean
+
+/**
+ * Logical AND operation. Returns true if both this boolean and [other] are true, false otherwise.
+ *
+ * Table of results:
+ * true && true -> true
+ * true && false -> false
+ * false && true -> false
+ * false && false -> false
+ */
+
+
 public native operator fun boolean.and(other: boolean): boolean
+
+/**
+ * Logical OR operation. Returns true if either this boolean or [other] are true, false otherwise.
+ *
+ * Table of results:
+ * true || true -> true
+ * true || false -> true
+ * false || true -> true
+ * false || false -> false
+ */
 public native operator fun boolean.or(other: boolean): boolean
+
+/**
+ * Logical XOR operation. Returns true if either this boolean or [other] are true, but not both.
+ *
+ * Table of results:
+ * true xor true -> false
+ * true xor false -> true
+ * false xor true -> true
+ * false xor false -> false
+ */
 public native operator fun boolean.xor(other: boolean): boolean
