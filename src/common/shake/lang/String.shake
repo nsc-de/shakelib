@@ -1,0 +1,56 @@
+
+package shake.lang
+    
+native class String {
+    
+    native static fun valueOf(bytes: Array<byte>): String
+    native static fun valueOf(bytes: Array<byte>, offset: int, length: int): String
+    native static fun valueOf(chars: Array<char>): String
+    native static fun valueOf(chars: Array<char>, offset: int, length: int): String
+
+    native static fun valueOf(b: byte): String
+    native static fun valueOf(c: short): String
+    native static fun valueOf(i: int): String
+    native static fun valueOf(l: long): String
+    native static fun valueOf(f: float): String
+    native static fun valueOf(d: double): String
+    native static fun valueOf(b: boolean): String
+    native static fun valueOf(obj: Object): String
+    
+    native val length: int
+    native fun charAt(index: int): char
+    native fun indexOf(s: String): int
+    native fun indexOf(s: String, fromIndex: int): int
+    native fun lastIndexOf(s: String): int
+    native fun lastIndexOf(s: String, fromIndex: int): int
+    native fun substring(beginIndex: int): String
+    native fun substring(beginIndex: int, endIndex: int): String
+    native fun toLowerCase(): String
+    native fun toUpperCase(): String
+    native fun trim(): String
+    native fun replace(oldChar: char, newChar: char): String
+    native fun replace(oldStr: String, newStr: String): String
+    native fun concat(str: String): String
+
+    native fun split(regex: String): Array<String>
+    native fun split(regex: String, limit: int): Array<String>
+
+    native fun toString(): String
+
+    native fun getBytes(): Array<byte>
+    native fun toCharArray(): Array<char>
+
+    native override fun equals(obj: Object): boolean
+    native override fun hashCode(): int
+    
+    native operator fun plus(str: String): String
+    native operator fun plus(c: char): String
+    native operator fun plus(b: byte): String
+    native operator fun plus(s: short): String
+    native operator fun plus(i: int): String
+    native operator fun plus(l: long): String
+    native operator fun plus(f: float): String
+    native operator fun plus(d: double): String
+    native operator fun plus(b: boolean): String
+    native operator fun plus(obj: Object): String
+}
